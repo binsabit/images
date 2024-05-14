@@ -49,9 +49,9 @@ func Format(format string) OptFunc {
 			err := image.ConvertToWebp()
 			return err
 		case Jpeg:
-			//TODO soon to be don
+			//TODO
 		case Png:
-			//TODO soon to be done
+			//TODO
 		}
 		return nil
 	}
