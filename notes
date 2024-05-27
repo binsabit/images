@@ -1,0 +1,40 @@
+Channels is all about signalling
+
+Attributes of channels
+- guarantee of delivery
+- state
+- with or without data
+
+Guarantee of delivery:
+    - when we are wringing code we have to thin about do I need to guarantee
+    its delivery before proceeding.
+    - if yes then use unbuffered channels that block
+    - if no use buffered channels
+
+State:
+
+channels have 3 states:
+    - open
+    - closed
+    - nil
+
+
+            |   NIL   | open    | closed
+ --------------------------------------
+ send       |blocked  | allowed | panic
+ -------------------------------------
+ receive    |blocked  | allowed | allowed
+
+
+
+
+Understanding channels
+channel:
+    - circular queue
+    - send index
+    - receive index
+    - mutex
+
+lives in heap it just channel
+
+
